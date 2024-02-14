@@ -18,7 +18,7 @@
                 <button class="btn">Play Now</button>
             </div>
         </section>
-        <section class="flex flex-col  items-center pt-20 gap-8">
+        <section class="hidden flex flex-col  items-center pt-20 gap-8">
             <!-- artboard  -->
             <div class="">
                 <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFCC] border-8 rounded-lg border-cyan-800">
@@ -79,8 +79,17 @@
                 </button>
             </div>
         </section>
-        <section>
-            <div></div>
+        <!-- result ground  -->
+        <section class="hidden flex justify-center items-center min-h-screen">
+            <div class="card w-96 bg-cyan-400 shadow-xl ">
+                <div class="card-body items-center text-center space-y-4">
+                  <h2 class="card-title text-5xl">Score: 14</h2>
+                  <div class="card-actions">
+                      <button class="btn btn-primary">Play Again</button>
+                    </div>
+                    <p>Practice Make You Pro</p>
+                </div>
+              </div>
         </section>
     </main>
 </body>
