@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-center bg-no-repeat items-center font-poppins">
+    <main
+        class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-center bg-no-repeat items-center font-poppins">
         <!-- Home Ground  -->
         <section id="home-ground" class="flex justify-center items-center min-h-screen text-center">
             <div class="text-white">
@@ -23,7 +26,7 @@
             <div class="">
                 <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFCC] border-8 rounded-lg border-cyan-800">
                     <div class="flex justify-center">
-                        <p class="bg-cyan-800 p-2 rounded-b-xl text-white">Don't watch keyboard  while playing...</p>
+                        <p class="bg-cyan-800 p-2 rounded-b-xl text-white">Don't watch keyboard while playing...</p>
                     </div>
                     <div class="flex justify-center items-center h-full">
                         <p id="current-letter" class="text-9xl font-bold uppercase">Y</p>
@@ -43,8 +46,8 @@
                     <kbd id="i" class="kbd">i</kbd>
                     <kbd id="o" class="kbd">o</kbd>
                     <kbd id="p" class="kbd">p</kbd>
-                  </div> 
-                  <div class="flex justify-center gap-1 my-1 w-full">
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
                     <kbd id="a" class="kbd">a</kbd>
                     <kbd id="s" class="kbd">s</kbd>
                     <kbd id="d" class="kbd">d</kbd>
@@ -54,8 +57,8 @@
                     <kbd id="j" class="kbd">j</kbd>
                     <kbd id="k" class="kbd">k</kbd>
                     <kbd id="l" class="kbd">l</kbd>
-                  </div> 
-                  <div class="flex justify-center gap-1 my-1 w-full">
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
                     <kbd id="z" class="kbd">z</kbd>
                     <kbd id="x" class="kbd">x</kbd>
                     <kbd id="c" class="kbd">c</kbd>
@@ -64,34 +67,43 @@
                     <kbd id="n" class="kbd">n</kbd>
                     <kbd id="m" class="kbd">m</kbd>
                     <kbd id="/" class="kbd">/</kbd>
-                  </div>
+                </div>
             </div>
             <div class="mt-40 flex justify-between w-1/2">
                 <button class="btn rounded-full">
                     Life
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                    <span>1</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span id="current-lives">5</span>
                 </button>
                 <button class="btn rounded-full">
                     Score
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                    <span>1</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span id="current-score">0</span>
                 </button>
             </div>
         </section>
         <!-- result ground  -->
-        <section class="hidden flex justify-center items-center min-h-screen">
+        <section id="final-ground" class="hidden flex justify-center items-center min-h-screen">
             <div class="card w-96 bg-cyan-400 shadow-xl ">
                 <div class="card-body items-center text-center space-y-4">
-                  <h2 class="card-title text-5xl">Score: 14</h2>
-                  <div class="card-actions">
-                      <button class="btn btn-primary">Play Again</button>
+                    <h2 class="card-title text-5xl">Score: <span id="final-gaming-score">14</span></h2>
+                    <div class="card-actions">
+                        <button onclick="play()" class="btn btn-primary">Play Again</button>
                     </div>
                     <p>Practice Make You Pro</p>
                 </div>
-              </div>
+            </div>
         </section>
     </main>
     <script src="scripts/game.js"></script>
 </body>
+
 </html>
